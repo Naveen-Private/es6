@@ -22,6 +22,17 @@ testVar();
 
 testLet();*/
 
+//Constants Usage.
+
+const colors = [];
+colors.push('red');
+colors.push('green');
+colors.push('blue');
+
+console.log(colors);// ['red','green','blue'];
+
+//colors = "Some Name";// Uncaught TypeError: Assignment to constant variable.
+
 class User{
 
 	//creating the constructor
@@ -64,6 +75,10 @@ class Member extends User{
 	getPackage(){
 		console.log(this.username+' registered with '+this.package+' package');
 	}
+
+	makeUppperCase(word){
+		return word.toUpperCase();
+	}
 }
 
 //Instantiating the child object with let
@@ -75,6 +90,16 @@ naveen.getPackage();
 naveen.register();
 
 User.countUsers();
+
+
+//Template Strings
+
+let myName = 'Nandu';
+
+let template = `<h2>${naveen.makeUppperCase('This is soo cool')} ${myName}
+				<p>This is small paragraph</p>`;
+
+document.getElementById('testInfo').innerHTML = template;
 
 
 
